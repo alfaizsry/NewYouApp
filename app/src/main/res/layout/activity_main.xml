@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/accent_color"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/accent_color"
+        tools:context=".MainActivity">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/primary_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gilroy_bold"
+                android:text="NewYou"
+                android:textAlignment="center"
+                android:textColor="@color/white_color"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="@color/white_color"
+                    app:cardCornerRadius="7dp"
+                    app:cardElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/gilroy_light"
+                            android:text="TOTAL KASUS"
+                            android:textAlignment="center"
+                            android:textColor="@color/black_color"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/txtKasus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gilroy_bold"
+                            android:text="_____"
+                            android:textAlignment="center"
+                            android:textColor="@color/red_color"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        app:cardBackgroundColor="@color/white_color"
+                        app:cardCornerRadius="7dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:fontFamily="@font/gilroy_light"
+                                android:text="SEMBUH"
+                                android:textAlignment="center"
+                                android:textColor="@color/black_color"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/txtSembuh"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gilroy_bold"
+                                android:text="_____"
+                                android:textAlignment="center"
+                                android:textColor="@color/green_color"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        app:cardBackgroundColor="@color/white_color"
+                        app:cardCornerRadius="7dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:fontFamily="@font/gilroy_light"
+                                android:text="MENINGGAL"
+                                android:textAlignment="center"
+                                android:textColor="@color/black_color"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/txtMeninggal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gilroy_bold"
+                                android:text="_____"
+                                android:textAlignment="center"
+                                android:textColor="@color/gray_color"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:text="Gejala"
+                    android:layout_weight="1"
+                    android:textColor="@color/darkGray_color"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvGejalaSelengkapnya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/gilroy_light"
+                    android:text="Selengkapnya"
+                    android:textColor="@color/gray_color"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewGejala"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_gejala" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:cardBackgroundColor="@color/primary_color"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/primary_color"
+                        android:layout_marginLeft="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/gilroy_bold"
+                            android:text="Untuk Mengetahui Lanjut Tentang COVID-19"
+                            android:textColor="@color/white_color"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:id="@+id/btnKnowMore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/gilroy_bold"
+                            android:text="INFO SELENGKAPNYA"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:textAllCaps="false"
+                            android:background="@color/primary_dark_color"
+                            android:textColor="@color/white_color"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/covid_sick_person"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:text="Pencegahan"
+                    android:layout_weight="1"
+                    android:textColor="@color/darkGray_color"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvViewPencegahanSelengkapnya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/gilroy_light"
+                    android:text="Selengkapnya"
+                    android:textColor="@color/gray_color"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPencegahan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_pencegahan" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
