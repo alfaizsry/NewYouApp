@@ -1,8 +1,7 @@
-package com.alfaiz.app.newyou
+package com.alfaiz.app.newyou.activity.gejala
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import coil.load
 import coil.loadAny
 import com.alfaiz.app.newyou.data.Item
 import com.alfaiz.app.newyou.databinding.ActivityDetailGejalaBinding

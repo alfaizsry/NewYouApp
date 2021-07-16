@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ActivityPencegahan">
+    tools:context=".activity.pencegahan.ActivityPencegahan">
 
     <LinearLayout
         android:layout_width="match_parent"

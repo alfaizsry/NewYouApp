@@ -1,13 +1,15 @@
-package com.alfaiz.app.newyou
+package com.alfaiz.app.newyou.activity.pencegahan
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.alfaiz.app.newyou.adapter.PencegahanAdapter
 import com.alfaiz.app.newyou.data.DummyPencegahan
 import com.alfaiz.app.newyou.data.Item
 import com.alfaiz.app.newyou.databinding.ActivityPencegahanBinding
+import com.alfaiz.app.newyou.iface.OnItemClickCallback
 import splitties.activities.start
 
 class ActivityPencegahan : AppCompatActivity() {
@@ -27,10 +29,12 @@ class ActivityPencegahan : AppCompatActivity() {
         with(activityPencegahanBinding){
             recyclerViewPencegahanList.setHasFixedSize(true)
             recyclerViewPencegahanList.layoutManager = LinearLayoutManager(this@ActivityPencegahan, LinearLayout.VERTICAL, false)
-            val pencegahanAdapter = PencegahanAdapter(DummyPencegahan.getAll())
+            val pencegahanAdapter =
+                PencegahanAdapter(DummyPencegahan.getAll())
             recyclerViewPencegahanList.adapter = pencegahanAdapter
 
-            pencegahanAdapter.setOnItemClickCallback(object : OnItemClickCallback{
+            pencegahanAdapter.setOnItemClickCallback(object :
+                OnItemClickCallback {
                 override fun onItemClick(pencegahan: Item) {
                     showSelectedPencegahan(pencegahan)
                 }

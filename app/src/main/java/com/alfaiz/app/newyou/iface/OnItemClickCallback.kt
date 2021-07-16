@@ -1,4 +1,4 @@
-package com.alfaiz.app.newyou
+package com.alfaiz.app.newyou.iface
 
 import com.alfaiz.app.newyou.data.Item
 

@@ -1,9 +1,10 @@
-package com.alfaiz.app.newyou
+package com.alfaiz.app.newyou.activity
 
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.alfaiz.app.newyou.R
 import kotlinx.android.synthetic.main.activity_selengkapnya.*
 
 class ActivitySelengkapnya : AppCompatActivity() {

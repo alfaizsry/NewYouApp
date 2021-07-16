@@ -1,10 +1,10 @@
-package com.alfaiz.app.newyou
+package com.alfaiz.app.newyou.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
 import coil.loadAny
+import com.alfaiz.app.newyou.iface.OnItemClickCallback
 import com.alfaiz.app.newyou.data.Item
 import com.alfaiz.app.newyou.databinding.ItemGejalaBinding
 
@@ -17,7 +17,7 @@ class GejalaAdapter(private var gejalaList: MutableList<Item>):
         this.onItemClickCallback = onItemClickCallback
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GejalaAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             ItemGejalaBinding.inflate(
                 LayoutInflater.from(parent.context),
@@ -41,7 +41,7 @@ class GejalaAdapter(private var gejalaList: MutableList<Item>):
 
     override fun getItemCount(): Int = gejalaList.size
 
-    override fun onBindViewHolder(holder: GejalaAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(gejalaList[position])
     }
 

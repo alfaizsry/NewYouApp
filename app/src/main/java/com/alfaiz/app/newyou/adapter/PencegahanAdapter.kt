@@ -1,10 +1,10 @@
-package com.alfaiz.app.newyou
+package com.alfaiz.app.newyou.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
 import coil.loadAny
+import com.alfaiz.app.newyou.iface.OnItemClickCallback
 import com.alfaiz.app.newyou.data.Item
 import com.alfaiz.app.newyou.databinding.ItemPencegahanBinding
 
@@ -41,7 +41,7 @@ class PencegahanAdapter(private var pencegahanList: MutableList<Item>):
 
     override fun getItemCount(): Int = pencegahanList.size
 
-    override fun onBindViewHolder(holder: PencegahanAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(pencegahanList[position])
     }
 }

@@ -7,10 +7,18 @@ import android.os.Bundle
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.alfaiz.app.newyou.activity.ActivitySelengkapnya
+import com.alfaiz.app.newyou.activity.gejala.ActivityDetailGejala
+import com.alfaiz.app.newyou.activity.gejala.ActivityGejala
+import com.alfaiz.app.newyou.activity.pencegahan.ActivityDetailPencegahan
+import com.alfaiz.app.newyou.activity.pencegahan.ActivityPencegahan
+import com.alfaiz.app.newyou.adapter.GejalaAdapter
+import com.alfaiz.app.newyou.adapter.PencegahanAdapter
 import com.alfaiz.app.newyou.data.DummyGejala
 import com.alfaiz.app.newyou.data.DummyPencegahan
 import com.alfaiz.app.newyou.data.Item
 import com.alfaiz.app.newyou.databinding.ActivityMainBinding
+import com.alfaiz.app.newyou.iface.OnItemClickCallback
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
@@ -56,7 +64,7 @@ class MainActivity : AppCompatActivity() {
             val gejalaAdapter = GejalaAdapter(DummyGejala.getSome())
             recyclerViewGejala.adapter = gejalaAdapter
 
-            gejalaAdapter.setOnItemClickCallback(object : OnItemClickCallback{
+            gejalaAdapter.setOnItemClickCallback(object : OnItemClickCallback {
                 override fun onItemClick(gejala: Item) {
                     showSelectedGejala(gejala)
                 }
@@ -67,7 +75,7 @@ class MainActivity : AppCompatActivity() {
             val pencegahanAdapter = PencegahanAdapter(DummyPencegahan.getSome())
             recyclerViewPencegahan.adapter = pencegahanAdapter
 
-            pencegahanAdapter.setOnItemClickCallback(object : OnItemClickCallback{
+            pencegahanAdapter.setOnItemClickCallback(object : OnItemClickCallback {
                 override fun onItemClick(pencegahan: Item) {
                     showSelectedPencegahan(pencegahan)
                 }

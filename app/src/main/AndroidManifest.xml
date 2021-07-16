@@ -11,12 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NewYou">
-        <activity android:name=".ActivityDetailPencegahan"></activity>
-        <activity android:name=".ActivityDetailGejala" />
-        <activity android:name=".ActivityPencegahan" />
-        <activity android:name=".ActivityGejala" />
-        <activity android:name=".ActivitySelengkapnya" />
-        <activity android:name=".SplashScreen">
+        <activity android:name=".activity.pencegahan.ActivityDetailPencegahan"></activity>
+        <activity android:name=".activity.gejala.ActivityDetailGejala" />
+        <activity android:name=".activity.pencegahan.ActivityPencegahan" />
+        <activity android:name=".activity.gejala.ActivityGejala" />
+        <activity android:name=".activity.ActivitySelengkapnya" />
+        <activity android:name=".activity.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
