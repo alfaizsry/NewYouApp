@@ -101,19 +101,19 @@ class MainActivity : AppCompatActivity() {
         val stringRequest = StringRequest(
                 Request.Method.GET,
                 url,
-                Response.Listener<String>{
-                    var jsonObject = JSONObject(it.toString())
+            {
+                var jsonObject = JSONObject(it.toString())
 
-                    txtKasus.text = jsonObject.getString("cases")
-                    txtSembuh.text = jsonObject.getString("recovered")
-                    txtMeninggal.text = jsonObject.getString("deaths")
-                },
-                Response.ErrorListener {
-                    Toast.makeText(this, it.toString(), Toast.LENGTH_LONG).show()
-                    txtKasus.text = "_____"
-                    txtSembuh.text = "_____"
-                    txtMeninggal.text = "_____"
-                }
+                txtKasus.text = jsonObject.getString("cases")
+                txtSembuh.text = jsonObject.getString("recovered")
+                txtMeninggal.text = jsonObject.getString("deaths")
+            },
+            {
+                Toast.makeText(this, it.toString(), Toast.LENGTH_LONG).show()
+                txtKasus.text = "_____"
+                txtSembuh.text = "_____"
+                txtMeninggal.text = "_____"
+            }
         )
 
         val requestQueue = Volley.newRequestQueue(this)
