@@ -19,7 +19,7 @@
             android:layout_margin="15dp"
             android:gravity="center"
             android:fontFamily="@font/gilroy_bold"
-            android:text="Symptoms"
+            android:text="Pencegahan"
             android:layout_above="@id/recyclerViewPencegahanList"
             android:textColor="@color/darkGray_color"
             android:textSize="20sp" />

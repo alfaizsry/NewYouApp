@@ -1,10 +1,9 @@
 package com.alfaiz.app.newyou.activity.pencegahan
 
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.alfaiz.app.newyou.adapter.PencegahanAdapter
 import com.alfaiz.app.newyou.data.DummyPencegahan
 import com.alfaiz.app.newyou.data.Item
@@ -24,26 +23,26 @@ class ActivityPencegahan : AppCompatActivity() {
         showPencegahanList()
     }
 
-    @SuppressLint("WrongConstant")
-    private fun showPencegahanList(){
-        with(activityPencegahanBinding){
+    private fun showPencegahanList() {
+        with(activityPencegahanBinding) {
             recyclerViewPencegahanList.setHasFixedSize(true)
-            recyclerViewPencegahanList.layoutManager = LinearLayoutManager(this@ActivityPencegahan, LinearLayout.VERTICAL, false)
+            recyclerViewPencegahanList.layoutManager =
+                LinearLayoutManager(this@ActivityPencegahan, RecyclerView.VERTICAL, false)
             val pencegahanAdapter =
                 PencegahanAdapter(DummyPencegahan.getAll())
             recyclerViewPencegahanList.adapter = pencegahanAdapter
 
             pencegahanAdapter.setOnItemClickCallback(object :
                 OnItemClickCallback {
-                override fun onItemClick(pencegahan: Item) {
-                    showSelectedPencegahan(pencegahan)
+                override fun onItemClick(item: Item) {
+                    showSelectedPencegahan(item)
                 }
             })
         }
     }
 
-    private fun showSelectedPencegahan(pencegahan: Item){
-        start<ActivityDetailPencegahan>{
+    private fun showSelectedPencegahan(pencegahan: Item) {
+        start<ActivityDetailPencegahan> {
             putExtra(ActivityDetailPencegahan.EXTRA_PRODUCT, pencegahan)
         }
     }

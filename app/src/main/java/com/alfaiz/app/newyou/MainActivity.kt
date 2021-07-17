@@ -1,12 +1,11 @@
 package com.alfaiz.app.newyou
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.alfaiz.app.newyou.activity.ActivitySelengkapnya
 import com.alfaiz.app.newyou.activity.gejala.ActivityDetailGejala
 import com.alfaiz.app.newyou.activity.gejala.ActivityGejala
@@ -20,7 +19,6 @@ import com.alfaiz.app.newyou.data.Item
 import com.alfaiz.app.newyou.databinding.ActivityMainBinding
 import com.alfaiz.app.newyou.iface.OnItemClickCallback
 import com.android.volley.Request
-import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import kotlinx.android.synthetic.main.activity_main.*
@@ -56,22 +54,24 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    @SuppressLint("WrongConstant")
-    private fun showRecycleList(){
-        with(activityMainBinding){
+
+    private fun showRecycleList() {
+        with(activityMainBinding) {
             recyclerViewGejala.setHasFixedSize(true)
-            recyclerViewGejala.layoutManager = LinearLayoutManager(this@MainActivity, LinearLayout.HORIZONTAL, false)
+            recyclerViewGejala.layoutManager =
+                LinearLayoutManager(this@MainActivity, RecyclerView.HORIZONTAL, false)
             val gejalaAdapter = GejalaAdapter(DummyGejala.getSome())
             recyclerViewGejala.adapter = gejalaAdapter
 
             gejalaAdapter.setOnItemClickCallback(object : OnItemClickCallback {
-                override fun onItemClick(gejala: Item) {
-                    showSelectedGejala(gejala)
+                override fun onItemClick(item: Item) {
+                    showSelectedGejala(item)
                 }
             })
 
             recyclerViewPencegahan.setHasFixedSize(true)
-            recyclerViewPencegahan.layoutManager = LinearLayoutManager(this@MainActivity, LinearLayout.HORIZONTAL,false)
+            recyclerViewPencegahan.layoutManager =
+                LinearLayoutManager(this@MainActivity, RecyclerView.HORIZONTAL, false)
             val pencegahanAdapter = PencegahanAdapter(DummyPencegahan.getSome())
             recyclerViewPencegahan.adapter = pencegahanAdapter
 
@@ -84,23 +84,24 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun showSelectedGejala(gejala: Item){
-        start<ActivityDetailGejala>{
+    private fun showSelectedGejala(gejala: Item) {
+        start<ActivityDetailGejala> {
             putExtra(ActivityDetailGejala.EXTRA_PRODUCT, gejala)
         }
     }
-    private fun showSelectedPencegahan(pencegahan: Item){
-        start<ActivityDetailPencegahan>{
+
+    private fun showSelectedPencegahan(pencegahan: Item) {
+        start<ActivityDetailPencegahan> {
             putExtra(ActivityDetailPencegahan.EXTRA_PRODUCT, pencegahan)
         }
     }
 
-    private fun getCovidData(){
+    private fun getCovidData() {
         val url = "https://disease.sh/v3/covid-19/all"
 
         val stringRequest = StringRequest(
-                Request.Method.GET,
-                url,
+            Request.Method.GET,
+            url,
             {
                 var jsonObject = JSONObject(it.toString())
 

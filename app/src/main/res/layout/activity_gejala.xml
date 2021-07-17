@@ -19,7 +19,7 @@
             android:layout_margin="15dp"
             android:gravity="center"
             android:fontFamily="@font/gilroy_bold"
-            android:text="Symptoms"
+            android:text="Gejala"
             android:layout_above="@id/recyclerViewGejalaList"
             android:textColor="@color/darkGray_color"
             android:textSize="20sp" />

@@ -13,7 +13,10 @@ class ActivitySelengkapnya : AppCompatActivity() {
         setContentView(R.layout.activity_selengkapnya)
 
         btnLearnMore.setOnClickListener {
-            var intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19"))
+            var intent = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19")
+            )
             startActivity(intent)
         }
     }
